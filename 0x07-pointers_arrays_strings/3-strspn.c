@@ -1,32 +1,25 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * _strspn - search a string for a set of bytes
- * @s: source string
- * @accept: accepted string
- *
- * Return: number of bytes in the init segment
+ * _strspn - returns the number of bytes in which the prefix
+ * of the first string is similar to the second string
+ * @s: first string
+ * @accept: second string
+ * Return: number of bytes in s that are also in accept
  */
 unsigned int _strspn(char *s, char *accept)
 {
-unsigned int a = 0, b, t = 0;
+int i, j;
+int k = 0;
 
-while (accept[a])
+for (i = 0; s[i] != ' ' && s[i] != '\0'; i++)
 {
-b = 0;
-
-while (s[b] != 32)
+for (j = 0; accept[j] != '\0'; j++)
 {
-if (accept[a] == s[b])
-{
-t++;
+if (s[i] == accept[j])
+k += 1;
+}
 }
 
-b++;
-}
-
-a++;
-}
-
-return (t);
+return (k);
 }
