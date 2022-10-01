@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * -abs - makes all integer positive
+ * _abs - makes all integer positive
  * @c: an integer
  * Return: returns the absolute value of c
  */
